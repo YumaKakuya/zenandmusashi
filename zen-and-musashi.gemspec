@@ -15,7 +15,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 3.0.0'
 
-  spec.files         = Dir.glob('{bin,lib}/**/*') + %w[README.md zen-and-musashi.gemspec]
+  spec.files         = Dir.glob('{bin,lib}/**/*') + %w[README.md LICENSE SOURCES.md Rakefile zen-and-musashi.gemspec]
   spec.bindir        = 'bin'
   spec.executables   = ['musashi']
   spec.require_paths = ['lib']

@@ -24,6 +24,7 @@ If you want richer, AI-generated responses, an optional LLM shelf is available�
 - [Optional LLM Mode](#optional-llm-mode)
 - [Database](#database)
 - [Configuration & Data Location](#configuration--data-location)
+- [Sources & Attribution](#sources--attribution)
 - [Development](#development)
 - [Publishing](#publishing)
 - [License](#license)
@@ -233,10 +234,12 @@ On first run, the database is automatically populated with:
 - **Zen mode:** 15 authentic + 15 composed quotes
 - **Musashi mode:** 15 authentic + 15 composed quotes
 
-**Authentic quotes** are derived from historical Zen records and Miyamoto Musashi's *Go Rin no Sho* (The Book of Five Rings).  
-**Composed quotes** are original writing in the same spirit.
+**Authentic quotes** are derived from historical Zen records (Dogen's *Shobogenzo*, *Zenrin Kushu*, Rinzai koan collections) and Miyamoto Musashi's *Go Rin no Sho* (The Book of Five Rings) and *Dokkodo* (The Way of Walking Alone).  
+**Composed quotes** are original writing in the same spirit. They are not attributed to any historical figure.
 
 All seed data is in English and verified to be under 200 characters.
+
+For full source attribution of every authentic quote, see [SOURCES.md](SOURCES.md).
 
 ---
 
@@ -248,6 +251,17 @@ All seed data is in English and verified to be under 200 characters.
 | Windows | `%USERPROFILE%\.config\zen-and-musashi\quotes.db` |
 
 The directory is created automatically on first run.
+
+---
+
+## Sources & Attribution
+
+Every quote labeled `authentic` has been traced to a specific text or lineage. Full attribution — including source texts, authors, and translation notes — is documented in [SOURCES.md](SOURCES.md).
+
+Key sources:
+
+- **Zen**: Dogen Zenji (*Shobogenzo*), *Zenrin Kushu*, Matsuo Basho, Shunryu Suzuki, Yunmen Wenyan
+- **Musashi**: *Go Rin no Sho* (1645), *Dokkodo* (1645)
 
 ---
 
@@ -269,7 +283,7 @@ ruby -Ilib bin/musashi zen "test input"
 ### Running Tests
 
 ```bash
-rake test
+bundle exec rake test
 ```
 
 ### Building the Gem
@@ -300,7 +314,7 @@ This produces `zen-and-musashi-0.3.0.gem`.
 
 ## License
 
-MIT License — see [LICENSE](LICENSE) for details.
+MIT License. See [LICENSE](LICENSE) for the full text.
 
 ---
 
